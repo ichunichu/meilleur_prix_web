@@ -2,7 +2,7 @@ import {Client, Account, ID, Functions, Databases, Storage} from 'appwrite';
 
 
 export const client = new Client()
-    .setEndpoint('http://45.140.164.127:1000/v1') // Your API Endpoint
+    .setEndpoint('http://45.140.164.127/v1') // Your API Endpoint
     .setProject('638dc03878130d4ed972');               // Your project ID
 
 export const functions = new Functions(client);

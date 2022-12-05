@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import {useEffect, useState} from "react";
 import {getAccount, getSession} from "./lib/appwrite/appwrite";
@@ -20,6 +20,8 @@ function App() {
       console.log("sessionId", res)
       if (res) {
         getSession(res, setSession)
+      }else{
+        setIsLoading(false)
       }
 
     }
@@ -27,6 +29,7 @@ function App() {
 
     if (! account){
       getAccount(setAccount)
+      setIsLoading(false)
     }
 
 
@@ -37,8 +40,8 @@ function App() {
       localStorage.setItem("sessionId",session.$id)
       console.log("stored", session.$id)
     }
-    setIsLoading(false)
-  },[session])
+
+  },[session,account])
 
   if (isLoading){
     return <h1>Is Loading</h1>
