@@ -3,6 +3,8 @@ import './App.css';
 import {useEffect, useState} from "react";
 import {getAccount, getSession} from "./lib/appwrite/appwrite";
 import {Auth} from "./screens/Auth";
+import {Header} from "./components/Header";
+import {Grid} from "./components/Grid";
 
 function App() {
   const [isLoading,setIsLoading] = useState(true)
@@ -43,22 +45,7 @@ function App() {
   }
 
   return (
-      (session && account ?<div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>: <Auth setSession={setSession}/>)
+      (session && account ?<><Header/><Grid/></>: <Auth setSession={setSession}/>)
 
   );
 }

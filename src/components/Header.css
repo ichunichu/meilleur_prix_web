@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5em;
+}
+header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+header input {
+    font-size: 32px;
+    height: 3rem;
+    width: 20rem;
+
+    border-width: 0px;
+}
+
+#searchBox{
+    gap: 0;
+}
