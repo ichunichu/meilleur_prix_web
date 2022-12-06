@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {createAccount, login} from "../lib/appwrite/appwrite";
+import {createAccount, login} from "../../../../WebstormProjects/share-it-everywhere/src/utils/appwrite/appwrite";
 
 export function Auth({setSession}){
     const [newAccount,setNewAccount] = useState(false)

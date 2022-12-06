@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
 import {useEffect, useState} from "react";
-import {getAccount, getSession} from "./lib/appwrite/appwrite";
+import {getAccount, getSession} from "../../../WebstormProjects/share-it-everywhere/src/utils/appwrite/appwrite";
 import {Auth} from "./screens/Auth";
 import {Header} from "./components/Header";
 import {Grid} from "./components/Grid";
